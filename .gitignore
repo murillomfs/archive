@@ -66,6 +66,11 @@ typings/
 /.pnp
 .pnp.js
 
+# backend firebase
+/functions
+.firebaserc
+firebase.json
+
 # testing
 /coverage
 
