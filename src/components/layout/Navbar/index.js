@@ -1,31 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import mysql from 'mysql';
-
 import { GitPullRequest, FileText, Archive, Video } from 'react-feather';
 
 import { Container, Title, Button, Box, BoxTitle, BoxInfo } from './styles';
 
 function Navbar() {
-    const connection = mysql.createConnection({
-        host: process.env.DB_HOST,
-        user: process.env.DB_USER,
-        password: process.env.DB_PASS,
-        database: process.env.DB_DATABASE,
-    });
-    
-    const query = 'SELECT * FROM ak_membros WHERE id = 1';
-
-    connection.query(query, (err, rows, fields) => {
-        if(err) {
-            console.log('Failed' + err);
-            res.sendStatus(500)
-            return
-        }
-
-        res.json(rows);
-    });
-
     return (
         <Container>
             <Link to="/">
